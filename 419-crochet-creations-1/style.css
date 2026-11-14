@@ -1,0 +1,426 @@
+/* Warm & Cozy Color Palette */
+:root {
+  --bg-cream: #fdf8f5;
+  --surface-white: #fffdfb;
+  --sand-tint: #f6ede6;
+  --terracotta: #c86d51;
+  --terracotta-hover: #b35a3f;
+  --sage: #e4ebe4;
+  --sage-text: #4a5d4e;
+  --espresso: #3d2e28;
+  --warm-gray: #6e5d56;
+  --border-soft: #eadfd7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  color: var(--espresso);
+  background-color: var(--bg-cream);
+}
+
+/* Serif Headings */
+h1, h2, h3, .logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--surface-white);
+  padding: 1.25rem 2.5rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.logo {
+  font-size: 1.45rem;
+  color: var(--terracotta);
+  letter-spacing: 0.4px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--warm-gray);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--terracotta);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(180deg, var(--sand-tint) 0%, var(--bg-cream) 100%);
+  text-align: center;
+  padding: 5rem 1.5rem 3.5rem;
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--sage);
+  color: var(--sage-text);
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: 2.55rem;
+  line-height: 1.25;
+  color: var(--espresso);
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--warm-gray);
+  margin-bottom: 2.25rem;
+}
+
+/* Pill-Shaped Welcoming Button */
+.btn {
+  display: inline-block;
+  background-color: var(--terracotta);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200, 109, 81, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--terracotta-hover);
+  transform: translateY(-2px);
+}
+
+.contact-btn {
+  margin-top: 1.5rem;
+}
+
+/* Main Content & Cards */
+.container {
+  max-width: 960px;
+  margin: 1rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: var(--surface-white);
+  padding: 2.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-soft);
+  margin-bottom: 2.25rem;
+  box-shadow: 0 8px 24px rgba(61, 46, 40, 0.04);
+}
+
+.story-card {
+  text-align: center;
+}
+
+.story-card p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--warm-gray);
+  font-size: 1.05rem;
+}
+
+.card h2 {
+  font-size: 1.85rem;
+  margin-bottom: 0.75rem;
+  color: var(--espresso);
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* 3-Column Patterns Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.box {
+  background-color: var(--bg-cream);
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+.photo-placeholder {
+  background-color: var(--sand-tint);
+  color: var(--warm-gray);
+  height: 170px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px dashed var(--border-soft);
+}
+
+.item-photo {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--sage);
+  color: var(--sage-text);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+}
+
+.box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--terracotta);
+}
+
+.box p {
+  font-size: 0.95rem;
+  color: var(--warm-gray);
+}
+
+/* Mom Life Blog List */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.blog-post {
+  background-color: var(--bg-cream);
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+}
+
+.post-date {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--sage-text);
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.blog-post h3 {
+  font-size: 1.35rem;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+  color: var(--warm-gray);
+  font-size: 0.98rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--sand-tint);
+  border-top: 1px solid var(--border-soft);
+}
+
+.footer-note {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--espresso);
+  margin-bottom: 0.4rem;
+}
+
+.footer-sub {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+}
+
+/* Sub-Page Article & Pattern Styles */
+.article-card {
+  max-width: 780px;
+  margin: 1rem auto 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--terracotta);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.article-card h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  margin-bottom: 1.75rem;
+}
+
+.large-photo {
+  height: 280px;
+  margin-bottom: 2rem;
+}
+
+.hero-article-photo {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  font-size: 1.08rem;
+  color: var(--espresso);
+  margin-bottom: 2rem;
+}
+
+.info-box {
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.info-box h3 {
+  color: var(--terracotta);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.styled-list {
+  padding-left: 1.25rem;
+  color: var(--warm-gray);
+}
+
+.styled-list li {
+  margin-bottom: 0.45rem;
+}
+
+.article-body h3 {
+  font-size: 1.4rem;
+  color: var(--espresso);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.article-body p {
+  color: var(--warm-gray);
+  margin-bottom: 1.15rem;
+  font-size: 1.02rem;
+}
+
+.warm-quote {
+  background-color: var(--sand-tint);
+  border-left: 4px solid var(--terracotta);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--espresso);
+  margin: 1.75rem 0;
+}
+
+.article-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+/* Clickable Pattern & Journal Cards */
+.box, .blog-post {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.box:hover, .blog-post:hover {
+  transform: translateY(-3px);
+  border-color: var(--terracotta);
+  box-shadow: 0 8px 20px rgba(61, 46, 40, 0.06);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--terracotta);
+}
+
+.card-link:hover .read-more {
+  text-decoration: underline;
+}
+
+/* Warm Styling for Links Inside Articles & Patterns */
+.article-body a {
+  color: var(--terracotta);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-body a:hover {
+  color: var(--terracotta-hover);
+}
